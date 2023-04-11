@@ -11,6 +11,12 @@ public class MethodsExercises {
         System.out.println("subtraction: "+sub(10,3));
         System.out.println("Get Integer: "+getInteger(1,10));
         System.out.println("Factorial: "+ factorial(10));
+
+        int numSides = askForNumSides();
+        do {
+            rollDice(numSides);
+        } while (askForRollAgain());
+
     }
     public static long add(long x, long y){
         return x+y;
@@ -51,5 +57,27 @@ public class MethodsExercises {
         } else {
             return n * factorial(n-1);
         }
+    }
+    public static int askForNumSides() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter the number of sides for a pair of dice: ");
+        int numSides = scanner.nextInt();
+        return numSides;
+    }
+    public static void rollDice(int numSides) {
+        int die1 = rollDie(numSides);
+        int die2 = rollDie(numSides);
+        System.out.println("Die 1: " + die1);
+        System.out.println("Die 2: " + die2);
+    }
+    public static int rollDie(int numSides) {
+        return (int) (Math.random() * numSides) + 1;
+    }
+
+    public static boolean askForRollAgain() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Roll again? (y/n): ");
+        String answer = scanner.next().toLowerCase();
+        return answer.equals("y");
     }
 }
