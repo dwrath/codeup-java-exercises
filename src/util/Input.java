@@ -6,6 +6,7 @@ public class Input {
     private Scanner scanner;
 
     public Input(){
+        System.out.print("Enter a string: ");
          this.scanner = new Scanner(System.in);
     }
     public String getString(){
@@ -13,6 +14,7 @@ public class Input {
     }
     public boolean yesNo(){
         System.out.println("Continue? ");
+        this.scanner.nextLine();
         String answer = this.scanner.nextLine();
         if(answer.equals("y") || answer.equals("yes")){
             return true;
