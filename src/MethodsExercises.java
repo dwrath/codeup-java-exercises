@@ -42,17 +42,16 @@ public class MethodsExercises {
     }
     public static int getInteger(int min, int max){
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter a number between 1 and 10: ");
+        System.out.print("Enter a number between Max and Min: ");
         int input = scanner.nextInt();
-        if(input<=10 && input >= 1){
+        if(input<=max && input >= min){
             return input;
         }else{
-            input =  getInteger(min, max);
+           return input =  getInteger(min, max);
         }
-        return input;
     }
-    public static long factorial(int n) {
-        if (n == 0) {
+    public static long factorial(long n) {
+        if (n == 0 || n == 1) {
             return 1;
         } else {
             return n * factorial(n-1);
