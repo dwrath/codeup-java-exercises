@@ -3,23 +3,20 @@ package util;
 import java.util.Scanner;
 
 public class Input {
-    private Scanner scanner;
+    private final Scanner scanner;
 
     public Input(){
-        System.out.print("Enter a string: ");
          this.scanner = new Scanner(System.in);
     }
     public String getString(){
+        System.out.println("Enter string: ");
         return scanner.nextLine();
     }
     public boolean yesNo(){
         System.out.println("Continue? ");
         this.scanner.nextLine();
         String answer = this.scanner.nextLine();
-        if(answer.equals("y") || answer.equals("yes")){
-            return true;
-        }
-        return false;
+        return answer.equals("y") || answer.equals("yes");
     }
     public int getInt(int min, int max){
         System.out.print("Enter a number between "+ max+ " and "+ min+": ");
@@ -27,7 +24,7 @@ public class Input {
         if(input<=max && input >= min){
             return input;
         }else{
-            return input =  getInt(min, max);
+            return getInt(min, max);
         }
     }
 
@@ -37,7 +34,7 @@ public class Input {
         if(input <= max && input >= min){
             return input;
         }else{
-            return input = getDouble(min, max);
+            return getDouble(min, max);
         }
     }
 }
