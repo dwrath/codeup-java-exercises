@@ -21,8 +21,8 @@ public class MoviesApplication {
                     return;
                 }
                 case 1 -> {
-                    for(int i =0; i < allMovies.length; i++){
-                        System.out.println(allMovies[i].toString());
+                    for (Movie allMovie : allMovies) {
+                        System.out.println(allMovie.toString());
                     }
 
                 }
