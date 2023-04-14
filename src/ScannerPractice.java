@@ -7,5 +7,9 @@ public class ScannerPractice {
         String userInput = scanner.next();
 
         System.out.printf("Ay cuh this yo word: %s", userInput);
+
+
+
     }
+
 }

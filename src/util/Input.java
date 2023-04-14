@@ -27,7 +27,13 @@ public class Input {
             return getInt(min, max);
         }
     }
-
+    public int getInt(){
+        return scanner.nextInt();
+    }
+    public int getInt(String prompt){
+        System.out.println(prompt);
+        return scanner.nextInt();
+    }
     public double getDouble(double min, double max){
         System.out.print("Enter a number between "+ max+ " and "+ min+": ");
         double input = this.scanner.nextDouble();
