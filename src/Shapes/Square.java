@@ -1,6 +1,6 @@
 package Shapes;
 
-public class Square extends Rectangle {
+public class Square extends Quadrilateral {
     private final double side;
 
     public Square(double side) {
@@ -16,5 +16,15 @@ public class Square extends Rectangle {
     @Override
     public double getPerimeter() {
         return side * 4;
+    }
+
+    @Override
+    void setLength(double length) {
+
+    }
+
+    @Override
+    void setWidth(double width) {
+
     }
 }
