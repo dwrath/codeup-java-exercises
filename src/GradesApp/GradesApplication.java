@@ -36,5 +36,7 @@ public class GradesApplication {
         Damarcus.addGrade(98);
         students.put("go_damarcus", Damarcus);
 
+        students.forEach((key, value) -> System.out.println(key + " : " + value.toString()));
+
     }
 }
